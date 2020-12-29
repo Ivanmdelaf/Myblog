@@ -1,3 +1,10 @@
-    <%= image.description %>
-    <%= link_to 'Edit', edit_image_path(image)%>
-    <%= link_to 'Destroy', image, method: :delete, data:{ confirm: 'sure?'}%><br>
+<div class="col-md-6 mt-2">
+    <figure class="figure">
+        <%= image_tag image.picture.thumb.url %>
+        
+            <figcaption class="figure-caption"><%= image.description %>
+            <%= link_to 'Edit', edit_image_path(image)%>
+            <%= link_to 'Destroy', image, method: :delete, data:{ confirm: 'sure?'}%>
+            </figcaption>
+    </figure>
+</div>
